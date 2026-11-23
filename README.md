@@ -1,107 +1,120 @@
-# Microarray-Based Expression Profiling for Identification of Differentially Expressed Genes and Related Pathways in Breast Cancer
+# Final Year Project – BS Bioinformatics
+
+## Microarray-Based Expression Profiling for Identification of Differentially Expressed Genes and Related Pathways in Breast Cancer
+
+**Student:** Sayeda Rehmat  
+**Degree:** BS Bioinformatics  
+**University:** Virtual University of Pakistan  
+**Department:** Biological Sciences  
+**Project Supervisor:** Saddia Bano  
+**Project Type:** Final Year Project (FYP)
+
+---
 
 ## About the Project
 
-This project focuses on studying gene expression patterns in breast cancer using microarray data. The main aim was to identify genes that show different expression levels in breast tumor samples compared with normal breast tissue and to explore the biological pathways associated with these changes.
+This repository contains my Final Year Project, completed as part of my BS Bioinformatics degree at Virtual University of Pakistan.
 
-Gene expression analysis helps us understand how changes in gene activity may be involved in cancer development and progression. By studying thousands of genes simultaneously, microarray technology provides a broader view of the molecular changes taking place in cancer cells.
+The project was based on studying gene expression differences between breast cancer and normal breast tissue using microarray data. The main purpose was to identify differentially expressed genes (DEGs) and explore the biological pathways associated with these genes.
 
-For this study, I used publicly available breast cancer microarray data from the Gene Expression Omnibus (GEO) database and performed differential gene expression and pathway enrichment analysis.
+For this study, I used a publicly available dataset from the NCBI Gene Expression Omnibus (GEO) database. I worked with the GSE15852 dataset, which contains gene expression data from breast tumor and normal tissue samples.
+
+During this project, I worked on expression data analysis, sample quality assessment, visualization of results, identification of differentially expressed genes, and pathway enrichment analysis. I also explored the biological roles of some genes identified in breast cancer-related pathways.
 
 ## Project Objectives
 
-The study was carried out with two main objectives:
+The project had two main objectives:
 
-1. To identify differentially expressed genes (DEGs) between breast cancer and normal tissue samples.
+1. To identify differentially expressed genes between breast tumor and normal tissue samples.
 2. To identify biological pathways associated with the differentially expressed genes.
 
-## Dataset Information
+## Dataset
 
-The dataset used in this project was obtained from the NCBI Gene Expression Omnibus (GEO) database.
+The data used in this project was obtained from the NCBI Gene Expression Omnibus (GEO).
 
-| Information | Details |
+| Dataset information | Details |
 |---|---|
-| Dataset accession | GSE15852 |
+| GEO Accession | GSE15852 |
 | Data source | NCBI GEO |
 | Platform | Affymetrix Human Genome U133A Array |
 | Breast tumor samples | 43 |
 | Normal samples | 43 |
 | Total samples | 86 |
 
-**Dataset link:** [GSE15852 – GEO Database](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE15852)
+**Dataset link:** [GSE15852 – NCBI GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE15852)
 
-## Methodology
+## What I Did
 
-The analysis followed a series of steps, starting with dataset collection and ending with biological interpretation.
+I followed a step-by-step approach to analyze the microarray gene expression data.
 
-### 1. Dataset Collection
+### 1. Data Collection
 
-Microarray expression data for breast tumor and normal samples were obtained from the GEO database using accession GSE15852.
+I obtained the GSE15852 dataset from the GEO database. The dataset included 43 breast tumor samples and 43 normal samples.
 
 ### 2. Quality Control and Normalization
 
-Quality control was performed to examine the expression data and assess sample consistency.
+I examined the expression data using box plots to check the distribution of values across samples.
 
-Normalization was used to make expression distributions comparable across samples, reducing technical variation before further analysis.
+Normalization was performed to make the expression distributions more comparable between samples before further analysis.
 
-### 3. Exploratory Data Analysis
+### 3. Data Visualization
 
-A UMAP plot was generated to visualize similarities and differences between tumor and normal samples.
+I used different plots to understand the expression data and observe differences between the tumor and normal groups.
 
-The plot showed a degree of separation between the two groups, suggesting differences in their gene expression profiles.
+The visualizations included:
 
-### 4. Differential Gene Expression Analysis
+- **Box Plot:** To examine the distribution of gene expression values across samples.
+- **UMAP Plot:** To visualize the expression patterns and observe how tumor and normal samples were distributed.
+- **Volcano Plot:** To visualize genes showing increased or decreased expression along with their statistical significance.
+- **VOOM Plot:** To examine the relationship between average expression and variance in the data.
 
-Differential expression analysis was performed to identify genes showing expression differences between breast tumor and normal samples.
+### 4. Differentially Expressed Gene Analysis
 
-The thresholds reported in the analysis were:
+I compared gene expression between breast tumor and normal samples to identify differentially expressed genes.
 
-- p-value < 0.05
-- Fold change < -1 or > 1
+The analysis used the following thresholds, as reported in my project:
 
-Genes meeting the selected criteria were considered differentially expressed.
+- p-value less than 0.05
+- Fold change less than -1 or greater than 1
 
-### 5. Data Visualization
+Based on these criteria, the analysis reported **22,283 differentially expressed genes**.
 
-Different plots were used to examine and present the analysis results:
+The volcano plot was used to visualize the expression changes:
 
-- **Box Plot:** Used to examine expression distributions across samples after normalization.
-- **UMAP Plot:** Used to visualize sample-level expression patterns.
-- **Volcano Plot:** Used to display the statistical significance and magnitude of gene expression changes.
-- **VOOM Plot:** Used to examine the mean-variance relationship in the expression data.
+- Red points represented upregulated genes.
+- Blue points represented downregulated genes.
 
-### 6. Pathway Enrichment Analysis
+### 5. Pathway Enrichment Analysis
 
-Pathway enrichment analysis was performed using Enrichr to investigate the biological pathways associated with the identified genes.
+After identifying the differentially expressed genes, I performed pathway enrichment analysis using Enrichr.
 
-The analysis focused on understanding how the differentially expressed genes relate to breast cancer and other cancer-associated biological processes.
+The purpose was to explore which biological pathways were associated with the identified genes and to understand their possible relevance to breast cancer.
 
 ## Results
 
 ### Differentially Expressed Genes
 
-The analysis identified **22,283 differentially expressed genes** in the GSE15852 dataset using the thresholds reported in the study.
+The analysis reported 22,283 differentially expressed genes in the GSE15852 dataset using the selected thresholds.
 
-The volcano plot showed genes with increased and decreased expression levels:
+The volcano plot provided a visual representation of genes with increased and decreased expression between the two sample groups.
 
-- Red points represent upregulated genes.
-- Blue points represent downregulated genes.
+The UMAP plot also showed differences in the distribution of tumor and normal samples.
 
-### Pathway Enrichment Analysis
+### Pathway Enrichment Results
 
 The pathway enrichment analysis highlighted several cancer-related pathways.
 
-| Enriched pathway | Number of genes |
+The main results included:
+
+| Pathway | Number of genes |
 |---|---:|
 | Pathways in cancer | 85 |
 | Breast cancer | 26 |
 | Proteoglycans in cancer | 49 |
 
-These findings show that the identified genes are associated with biological pathways relevant to cancer.
+### Some Genes Identified in the Analysis
 
-### Genes of Interest
-
-Some of the genes identified in the breast cancer pathway analysis included:
+The following genes were among those examined in the breast cancer pathway results:
 
 | Gene | Log2 Fold Change |
 |---|---:|
@@ -114,57 +127,58 @@ Some of the genes identified in the breast cancer pathway analysis included:
 | RB1 | -0.226344 |
 | FGFR1 | -0.147828 |
 
-These genes are involved in different biological processes, including cell-cycle regulation, Wnt signaling, estrogen signaling, and growth-factor signaling.
+I also explored the biological functions of these genes, particularly their roles in cell-cycle regulation, Wnt signaling, estrogen signaling, and growth-related pathways.
 
 ## Discussion
 
-The results provided an overview of gene expression changes and their possible biological relevance in breast cancer.
+One interesting part of this project was exploring how different genes are involved in biological processes related to breast cancer.
 
-Several genes were particularly interesting:
+For example:
 
-- **CDK4:** Involved in cell-cycle regulation and cell proliferation.
-- **FZD4:** Associated with Wnt signaling, which plays a role in cell growth and development.
-- **LEF1:** A transcription factor involved in Wnt/β-catenin signaling.
-- **ESR1:** Encodes estrogen receptor alpha and is associated with estrogen-related signaling.
-- **RB1:** A tumor suppressor gene involved in controlling cell division.
-- **ERBB2:** Encodes HER2, a receptor involved in cell growth and signaling.
+- **CDK4** is involved in cell-cycle regulation and cell division.
+- **FZD4** and **LEF1** are associated with Wnt signaling.
+- **ESR1** is related to estrogen receptor signaling.
+- **RB1** plays a role in controlling cell division.
+- **ERBB2** is involved in cell growth and signaling.
 
-The findings highlight the involvement of multiple signaling pathways rather than a single gene or biological process.
+Studying these genes helped me understand how changes in gene expression can be related to different molecular processes in breast cancer.
+
+The results also showed the importance of looking at biological pathways rather than focusing only on individual genes.
 
 ## Conclusion
 
-This project used microarray-based gene expression analysis to investigate molecular differences between breast cancer and normal breast tissue.
+Through this Final Year Project, I analyzed microarray gene expression data to study differences between breast cancer and normal tissue samples.
 
-The analysis identified differentially expressed genes and highlighted associated biological pathways, including breast cancer, general cancer pathways, and proteoglycans in cancer.
+The analysis helped identify differentially expressed genes and explore their associated biological pathways. Several cancer-related pathways and genes involved in important cellular processes were highlighted.
 
-Overall, the study provided an opportunity to explore how computational gene expression analysis can help investigate the molecular mechanisms underlying breast cancer and identify potential directions for future biomarker research.
+Overall, this project gave me practical experience in working with public gene expression datasets, understanding differential gene expression, visualizing biological data, and performing pathway enrichment analysis.
+
+It also helped me develop a better understanding of how bioinformatics approaches can be used to study the molecular aspects of cancer.
 
 ## Tools and Resources
 
-The following resources were used in the project:
+The main resources and tools used in this project included:
 
-- **NCBI GEO:** For obtaining publicly available microarray expression data.
-- **Affymetrix Human Genome U133A Array:** Microarray platform associated with the dataset.
+- **NCBI GEO:** For obtaining the gene expression dataset.
+- **Affymetrix Human Genome U133A Array:** Microarray platform used for the dataset.
 - **Enrichr:** For pathway enrichment analysis.
 - **Data visualization:** Box plots, UMAP plots, volcano plots, and VOOM plots.
 
 ## Limitations
 
-- The study was based on one publicly available microarray dataset.
-- The findings represent computational analysis and require further experimental validation.
-- Differential expression results depend on the selected statistical thresholds.
-- The identified genes and enriched pathways should be considered research findings rather than clinically validated biomarkers.
+- The study was based on a single publicly available dataset.
+- The findings were based on computational analysis.
+- The identified genes and pathways require further validation before any clinical application.
+- The results depend on the dataset and statistical thresholds used in the analysis.
 
 ## Acknowledgements
 
-I would like to acknowledge my project supervisor, **Saddia Bano**, and the Department of Biological Sciences, Virtual University of Pakistan, for their guidance and support throughout this final-year project.
+I would like to thank my project supervisor, **Saddia Bano**, for her guidance and support throughout my Final Year Project.
 
-I also acknowledge the NCBI Gene Expression Omnibus for making publicly available gene expression data accessible to researchers.
+I am also thankful to the Department of Biological Sciences, Virtual University of Pakistan, and NCBI GEO for providing access to publicly available gene expression data.
 
 ---
 
-**Project:** Final Year Project – BS Bioinformatics  
+**Academic Project:** BS Bioinformatics Final Year Project  
 **University:** Virtual University of Pakistan  
-**Department:** Biological Sciences  
-**Supervisor:** Saddia Bano  
-**Student:** Sayeda Rehmat
+**Department:** Biological Sciences
